@@ -1,0 +1,19 @@
+{
+    "name": "papajik/ares-search",
+    "description": "ARES search by IČO",
+    "type": "project",
+    "require": {
+        "dibi/dibi": "4.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Papajik\\AresSearch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michal Papaj",
+            "email": "papaj.mich@gmail.com"
+        }
+    ]
+}
