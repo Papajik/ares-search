@@ -1,0 +1,30 @@
+
+
+
+.ares-center{
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s all;
+}
+
+.ares-top{
+    position:fixed;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, 6%);
+    transition: 0.5s all;
+}
+
+.asc{
+    transform: rotate(0deg);
+    transition: 0.5s all;
+}
+
+.desc{
+    transform: rotate(180deg);
+    transition: 0.5s all;
+}
+
+

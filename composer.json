@@ -1,19 +1,25 @@
 {
-    "name": "papajik/ares-search",
-    "description": "ARES search by IČO",
-    "type": "project",
-    "require": {
-        "dibi/dibi": "4.2.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Papajik\\AresSearch\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Michal Papaj",
-            "email": "papaj.mich@gmail.com"
-        }
-    ]
+  "name": "papajik/ares-search",
+  "description": "ARES search",
+  "type": "project",
+  "require": {
+    "dibi/dibi": "4.2.*",
+    "twbs/bootstrap-icons": "^1.8",
+    "ext-simplexml": "*",
+    "ext-xmlreader": "*",
+    "tracy/tracy": "^2.9",
+    "phpmailer/phpmailer": "^6.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Papajik\\AresSearch\\": "src/",
+      "Papajik\\Config\\": "config/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Michal Papaj",
+      "email": "papaj.mich@gmail.com"
+    }
+  ]
 }
