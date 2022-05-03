@@ -83,7 +83,7 @@
             <div class="input-group-text" id="btnGroupAddon" style="width: 8em">Filtrovat podle:</div>
             <input type="search" class="form-control" style="width: 13em" placeholder="Jméno firmy">
             <button id="search-button" style="width: 3em" type="button" class="btn btn-primary"
-                    onclick="loadPage(getCurrentPage())">
+                    onclick="loadPage(1)">
                 <i class="bi bi-search"></i>
             </button>
         </div>
