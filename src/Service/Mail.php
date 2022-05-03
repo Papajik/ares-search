@@ -26,6 +26,7 @@ class Mail
     private function __construct()
     {
         $this->mailer = new PHPMailer(true);
+        $this->mailer->CharSet = $this->mailer::CHARSET_UTF8;
         $this->mailer->isSMTP();
         $this->mailer->Host = AppConfig::MAIL_HOST;
         $this->mailer->Port = AppConfig::MAIL_PORT;
@@ -51,11 +52,5 @@ class Mail
         } catch (Exception $e) {
             return $e->getMessage();
         }
-    }
-
-
-    public function getMailer(): PHPMailer
-    {
-        return $this->mailer;
     }
 }
