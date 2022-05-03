@@ -6,9 +6,8 @@ function sendMail(form) {
         url: '/calls/mail.php',
         data: form.serialize()
     }).then(function (res) {
+        $(form).find("input[name='mail']").val('');
         let json = JSON.parse(res);
-        console.log(json);
-        console.log(json['mail']);
         if (json['status'] === "OK") {
             alert(json['message']);
         } else {
