@@ -26,7 +26,7 @@ if (!empty($query)) {
             'ID' => $id
         );
 
-        $replace  =  function(array $matches) use (&$replacements){
+        $replace  =  function(array $matches) use ($replacements){
             return $replacements[$matches[1]];
         };
 
