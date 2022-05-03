@@ -24,11 +24,11 @@ if (!empty($query)) {
             'ID' => $id
         );
 
-        // https://stackoverflow.com/a/5815269/6152829
-        foreach ($replacements as $key => $m) {
-            $file = str_replace("{_" . $key . "_}", $m, $file);
-        }
-        echo $file;
+        $replace  =  function(array $matches) use (&$replacements){
+            return $replacements[$matches[1]];
+        };
+
+        echo preg_replace_callback('/{_(\w+)_}/', $replace, $file);
         return;
     }
 }
