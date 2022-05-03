@@ -1,6 +1,5 @@
 <?php
 
-
 use Papajik\AresSearch\Repository\RssRepository;
 use Papajik\AresSearch\Service\Database;
 

@@ -18,14 +18,20 @@ switch (parse_url($request, PHP_URL_PATH)) {
         break;
     case '/rss':
     case '/rss.xml':
-        require __DIR__ . '/calls/rss.php';
+        $query = parse_url($request, PHP_URL_QUERY);
+        parse_str($query, $output);
+        if (!empty($output) && $output['read'] == 1) {
+            require __DIR__ . '/view/rss.php';
+        } else {
+            require __DIR__ . '/calls/rss.php';
+        }
         break;
     case '/address':
     case '/address.php':
         require __DIR__ . '/calls/address.php';
         break;
     default:
-        echo "<a href='//" . $_SERVER['SERVER_NAME'] . "/'>Návrat</br>";
+        echo "Obsah nedostupný<br><a href='//" . $_SERVER['SERVER_NAME'] . "/'>Návrat na hlavní stránku</br>";
         http_response_code(404);
         die();
 }

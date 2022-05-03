@@ -1,7 +1,6 @@
 <?php
 require_once '../../vendor/autoload.php';
 
-
 use Papajik\AresSearch\Repository\SubjectRepository;
 use Papajik\AresSearch\Service\Database;
 

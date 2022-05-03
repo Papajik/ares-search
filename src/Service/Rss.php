@@ -50,6 +50,23 @@ class Rss
         return $rss->asXML();
     }
 
+    public function createHtml(array $items): string
+    {
+        $response = "<h2>Naposledy upravené adresy</h2>";
+        /** @var RssItem $item */
+        foreach ($items as $item) {
+            $response .= "<a href='" . ($this->isSecure() ? "https" : "http") . '://www.' . $_SERVER['SERVER_NAME'] . '/address?id=' . $item->getId() . "'"
+                . " class='list-group-item list-group-item-action'>";
+            $response .= '<div class="d-flex w-100 justify-content-between">';
+            $response .= '<h6 class="mb-1">' . $item->getTitle() . '</h6>';
+            $response .= " </div>";
+            $response .= '<small>Aktualizováno: ' . $item->getPubDate()->format("H:i:s D. M. Y ") . '</small>';
+            $response .= "</a>";
+        }
+
+
+        return $response;
+    }
 
     /**
      * Private method to determine links protocol
