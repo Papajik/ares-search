@@ -1,10 +1,6 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use Tracy\Debugger;
-
-Debugger::enable();
-
 $request = $_SERVER['REQUEST_URI'];
 
 switch (parse_url($request, PHP_URL_PATH)) {
