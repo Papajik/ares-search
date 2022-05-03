@@ -1,7 +1,9 @@
 <?php
-require_once '../../vendor/autoload.php';
+
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 
+use Papajik\AresSearch\Http;
 use Papajik\AresSearch\Repository\RssRepository;
 use Papajik\AresSearch\Service\Database;
 use Papajik\AresSearch\Service\Mail;
@@ -19,7 +21,7 @@ if (isset($id) && is_numeric($id) && isset($emailAddress) && filter_var($emailAd
 
     if (isset($item)) {
         $html = $rssService->createHtmlDetail($item);
-        $html .= "<a href='//" . $_SERVER['SERVER_NAME'] . "/address?id=" . $id . "'>Více informací</a>";
+        $html .= "<a href='" . (Http::isSecure() ? 'https' : 'http') . "://www." . $_SERVER['SERVER_NAME'] . "/address?id=" . $id . "'>Více informací</a>";
 
         $mail = Mail::getInstance();
         $isSend = $mail->sendMail($emailAddress, "Detail adresy", $html);
