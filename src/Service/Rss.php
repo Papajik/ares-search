@@ -56,7 +56,7 @@ class Rss
         $response = "<h2>Naposledy upravené adresy</h2>";
         /** @var RssItem $item */
         foreach ($items as $item) {
-            $response .= "<a href='" . (Http::isSecure() ? "https" : "http") . '://www.' . $_SERVER['SERVER_NAME'] . '/address?id=' . $item->getId() . "'"
+            $response .= "<a href='//". $_SERVER['SERVER_NAME'] . '/address?id=' . $item->getId() . "'"
                 . " class='list-group-item list-group-item-action'>";
             $response .= '<div class="d-flex w-100 justify-content-between">';
             $response .= '<h6 class="mb-1">' . $item->getTitle() . '</h6>';
