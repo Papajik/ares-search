@@ -11,8 +11,10 @@ if (!empty($query)) {
     $item = $rssRepository->getItem($id);
     if (isset($item)) {
         $file = file_get_contents('./view/address.php');
+        $navbar = file_get_contents('./view/elements/navbar.html');
 
         $replacements = array(
+            "NAVBAR" => $navbar,
             "ADDRESS" => $item->getAddress(),
             "CITY" => $item->getCity(),
             "POST" => $item->getPostalCode(),

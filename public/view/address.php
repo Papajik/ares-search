@@ -2,16 +2,18 @@
 <html lang="cs">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-
+    <link rel="stylesheet" href="../assets/css/all.min.css">
     <title>Detail adresy</title>
 </head>
 <body>
 
+{_NAVBAR_}
 
-<div id="ares_result" class=" ares-center" style="width: 28em">
+<div id="ares_result" class=" ares-center container" style="max-width: 28em">
     <h2>Detail adresy</h2>
     <table class="table table-striped">
         <tbody>
@@ -66,13 +68,14 @@
         </div>
     </form>
 </div>
+
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
 <script src="../assets/js/address.js"></script>
 
 <script>
     $("form").on('submit', function (event) {
         let form = $(this)[0];
-        if (form.reportValidity() && !$(this).find('button')[0].hasAttribute("disabled")){
+        if (form.reportValidity() && !$(this).find('button')[0].hasAttribute("disabled")) {
             event.preventDefault();
             sendMail($(this));
         }

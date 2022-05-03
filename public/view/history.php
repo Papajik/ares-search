@@ -2,6 +2,7 @@
 <html lang="cs">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
     <link rel="stylesheet" href="../assets/css/all.min.css">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -58,21 +59,21 @@
     </div>
 </div>
 
-<?php require "./view/elements/navbar.html"?>
+<?php require "./view/elements/navbar.html" ?>
 
-<div class="ares-center" style="width: 24rem;">
-    <div class="btn-toolbar mb-2 " role="toolbar">
-        <div class="btn-group" role="group">
-            <div class="input-group-text " id="btnGroupAddon" style="width: 6em">Řadit dle:</div>
+<div class="ares-center container" style="max-width: 25em">
+    <div class="btn-toolbar mb-2" role="toolbar">
+        <div class="btn-group  w-100" role="group">
+            <div class="input-group-text " id="btnGroupAddon">Řadit dle:</div>
             <input type="radio" class="btn-check" data-sort="name_date" name="sort_radio" id="sort_radio_1"
                    autocomplete="off" checked>
-            <label class="btn btn-outline-primary" style="width: 9em" for="sort_radio_1">
+            <label class="btn btn-outline-primary" for="sort_radio_1">
                 Jméno firmy
                 <i id="sort_icon_1" class="fas fa-arrow-up asc"></i>
             </label>
             <input type="radio" class="btn-check" data-sort="date" name="sort_radio" id="sort_radio_2"
                    autocomplete="off">
-            <label class="btn btn-outline-primary" style="width: 9em" for="sort_radio_2">
+            <label class="btn btn-outline-primary" for="sort_radio_2">
                 Čas vyhledání
                 <i id="sort_icon_2" class="fas fa-arrow-up asc d-none"></i>
             </label>
@@ -81,8 +82,8 @@
     <div class="btn-toolbar mb-2 justify-content-between" role="toolbar">
         <div class="input-group">
             <div class="input-group-text" id="btnGroupAddon" style="width: 8em">Filtrovat podle:</div>
-            <input type="search" class="form-control" style="width: 13em" placeholder="Jméno firmy">
-            <button id="search-button" style="width: 3em" type="button" class="btn btn-primary"
+            <input type="search" class="form-control" style="min-width: 4em; max-width: 13em" placeholder="Jméno firmy">
+            <button id="search-button" style="max-width: 3em" type="button" class="btn btn-primary"
                     onclick="loadPage(1)">
                 <i class="bi bi-search"></i>
             </button>
@@ -123,7 +124,7 @@
                     <div class="col-6">
                         IČO: <span></span>
                     </div>
-                    <span class="col-sm-6"></span>
+                    <span class="col"></span>
                 </div>
                 <a href="#subjectDetail" onclick="" class="stretched-link" data-bs-toggle="modal"></a>
             </div>
