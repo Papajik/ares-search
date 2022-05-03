@@ -59,6 +59,7 @@
     </div>
 </div>
 
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
 <?php require "./view/elements/navbar.html" ?>
 
 <div class="ares-center container" style="max-width: 25em">
@@ -159,7 +160,7 @@
 </div>
 
 
-<script src="../assets/js/jquery-3.6.0.min.js"></script>
+
 <script src="../assets/js/time.js"></script>
 <script src="../assets/js/history.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>

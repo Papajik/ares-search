@@ -3,7 +3,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">Vyhledávání</a>
+                    <a class="nav-link" href="/">Vyhledávání</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/history">Historie</a>
@@ -16,3 +16,9 @@
         </div>
     </div>
 </nav>
+
+<script>
+    $(function(){
+       $('#navbarNav').find("ul a[href^='"+window.location.pathname+"']")[0].classList.add('active');
+    });
+</script>
