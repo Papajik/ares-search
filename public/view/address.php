@@ -10,10 +10,10 @@
     <title>Detail adresy</title>
 </head>
 <body>
-
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
 {_NAVBAR_}
 
-<div id="ares_result" class=" ares-center container" style="max-width: 28em">
+<div id="ares_result" class=" ares-center container" style="max-width: 25em">
     <h2>Detail adresy</h2>
     <table class="table table-striped">
         <tbody>
@@ -69,7 +69,7 @@
     </form>
 </div>
 
-<script src="../assets/js/jquery-3.6.0.min.js"></script>
+
 <script src="../assets/js/address.js"></script>
 
 <script>

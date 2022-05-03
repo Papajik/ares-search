@@ -13,7 +13,7 @@
 
 </head>
 <body>
-
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
 <?php require "elements/navbar.html"?>
 
 <div class="d-flex align-items-center justify-content-center">
@@ -23,7 +23,7 @@
 
 </div>
 
-<script src="../assets/js/jquery-3.6.0.min.js"></script>
+
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script>
     console.log("test");

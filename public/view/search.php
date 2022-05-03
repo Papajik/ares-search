@@ -14,7 +14,7 @@
 
 </head>
 <body>
-
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
 <?php require "elements/navbar.html"?>
 
 <div id="form_enc" class="ares-center">
@@ -70,7 +70,7 @@
 
 
 
-<script src="../assets/js/jquery-3.6.0.min.js"></script>
+
 <script src="../assets/js/jquery.validate.min.js"></script>
 
 <script src="../assets/js/bootstrap.bundle.min.js"
