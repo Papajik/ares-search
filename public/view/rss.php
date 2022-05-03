@@ -14,7 +14,7 @@
 </head>
 <body>
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
-<?php require "elements/navbar.html"?>
+<?php require "elements/navbar.html" ?>
 
 <div class="d-flex align-items-center justify-content-center">
     <div id="result" class="list-group" style="width: 23em">
@@ -26,7 +26,6 @@
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script>
-    console.log("test");
     $.ajax({
         type: "POST",
         url: "/calls/rss.php",

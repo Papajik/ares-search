@@ -10,7 +10,9 @@
     <title>Detail adresy</title>
 </head>
 <body>
+
 <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
 {_NAVBAR_}
 
 <div id="ares_result" class=" ares-center container" style="max-width: 25em">
